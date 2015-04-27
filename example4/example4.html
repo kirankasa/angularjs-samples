@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app>
+<body>
+
+<div ng-init="characters=[{screenName:'Rachel Green',realName:'Jennifer Anniston'},
+                          {screenName:'Ross Geller',realName:'David Schwimmer'},
+                          {screenName:'Monica Geller',realName:'Courteney Cox'},
+                          {screenName:'Chandler Bing',realName:'Matthew Perry'},
+                          {screenName:'Phoebe Buffay',realName:'Lisa Kudrow'},
+                          {screenName:'Joey Tribbiani',realName:'Matt LeBlanc'}]">
+
+    <input type="text" ng-model="searchBy"/>
+   <h3>List of characters</h3>
+
+   <ul ng-repeat="character in characters | filter:searchBy |orderBy:'realName'">
+      <li>{{character.screenName | uppercase}} - {{character.realName | lowercase}}</li>
+   </ul>
+</div>
+
+</body>
+<script type="text/javascript" src="angular.min.js" ></script>
+</html>

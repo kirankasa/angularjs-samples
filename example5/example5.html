@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<body>
+
+<div ng-controller="CharacterController">
+
+    <input type="text" ng-model="searchBy"/>
+
+    <select ng-model="sortBy">
+        <option value="screenName">Screen Name</option>
+        <option value="realName">Real Name</option>
+    </select>
+
+    <h3>List of characters</h3>
+
+   <ul ng-repeat="character in characters | filter:searchBy | orderBy:sortBy">
+      <li>{{character.screenName | uppercase}} - {{character.realName | lowercase}}</li>
+   </ul>
+</div>
+
+</body>
+
+<script type="text/javascript" src="angular.min.js"></script>
+<script type="text/javascript" src="app.js"></script>
+</html>
