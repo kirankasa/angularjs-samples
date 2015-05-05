@@ -1,3 +1,5 @@
+//this module is dependent on ngRoute module,
+// so we should load it first
 var myApp = angular.module('myApp',['ngRoute']);
 
 myApp.config(['$routeProvider', function ($routeProvider) {

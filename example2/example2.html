@@ -4,11 +4,13 @@
 
 <div ng-init="names=['Rachel Green','Ross Geller','Monica Geller','Chandler Bing','Phoebe Buffay','Joey Tribbiani']">
    <h3>List of names</h3>
-   <ul ng-repeat="name in names">
-      <li>{{name}}</li>
+   <ul>
+      <li ng-repeat="name in names">
+         {{name}}
+      </li>
    </ul>
 </div>
 
 </body>
-<script type="text/javascript" src="angular.min.js" ></script>
+<script src="angular.min.js" ></script>
 </html>

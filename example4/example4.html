@@ -10,7 +10,7 @@
                           {screenName:'Joey Tribbiani',realName:'Matt LeBlanc'}]">
 
     <input type="text" ng-model="searchBy"/>
-   <h3>List of characters</h3>
+    <h3>List of characters</h3>
 
    <ul ng-repeat="character in characters | filter:searchBy |orderBy:'realName'">
       <li>{{character.screenName | uppercase}} - {{character.realName | lowercase}}</li>
@@ -18,5 +18,5 @@
 </div>
 
 </body>
-<script type="text/javascript" src="angular.min.js" ></script>
+<script src="angular.min.js" ></script>
 </html>
