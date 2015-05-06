@@ -17,3 +17,12 @@ myApp.config(['$routeProvider', function ($routeProvider) {
 
     $routeProvider.otherwise({redirectTo: '/employee'});
 }]);
+
+
+
+// custom directive
+myApp.directive('myEmployee', function() {
+    return {
+        templateUrl: 'myEmployee.html'
+    };
+});
