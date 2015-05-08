@@ -13,8 +13,10 @@
 
     <h3>List of characters</h3>
 
-   <ul ng-repeat="character in characters | filter:searchBy | orderBy:sortBy">
-      <li>{{character.screenName | uppercase}} - {{character.realName | lowercase}}</li>
+   <ul>
+      <li ng-repeat="character in characters | filter:searchBy | orderBy:sortBy">
+          {{character.screenName | uppercase}} - {{character.realName | lowercase}}
+      </li>
    </ul>
 </div>
 

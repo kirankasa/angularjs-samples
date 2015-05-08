@@ -12,8 +12,10 @@
     <input type="text" ng-model="searchBy"/>
     <h3>List of characters</h3>
 
-   <ul ng-repeat="character in characters | filter:searchBy |orderBy:'realName'">
-      <li>{{character.screenName | uppercase}} - {{character.realName | lowercase}}</li>
+   <ul>
+      <li ng-repeat="character in characters | filter:searchBy |orderBy:'realName'">
+          {{character.screenName | uppercase}} - {{character.realName | lowercase}}
+      </li>
    </ul>
 </div>
 
